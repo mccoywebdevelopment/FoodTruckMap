@@ -4,28 +4,44 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FoodTruckDriverComponent } from './food-truck-driver/food-truck-driver.component';
 import { RegisterComponent } from './food-truck-driver/register/register.component';
 import { LoginComponent } from './food-truck-driver/login/login.component';
 import { TruckDriverDashboardComponent } from './food-truck-driver/truck-driver-dashboard/truck-driver-dashboard.component';
 import { ClientComponent } from './client/client.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderComponent } from './header/header.component';
+import { MatButtonModule, MatToolbarModule, MatSidenavModule, MatIconModule,
+  MatListModule, MatCardModule, MatFormFieldModule, MatInputModule, MatMenuModule } from '@angular/material';
+import {FlexLayoutModule} from '@angular/flex-layout';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     FooterComponent,
     FoodTruckDriverComponent,
     RegisterComponent,
     LoginComponent,
     TruckDriverDashboardComponent,
-    ClientComponent
+    ClientComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FlexLayoutModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
