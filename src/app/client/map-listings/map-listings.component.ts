@@ -15,14 +15,21 @@ export class MapListingsComponent implements OnInit {
       '338 E Harvard Ave'),
       new Item('Banna Brew',
       'https://images.unsplash.com/photo-1513640127641-49ba81f8305c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
-      'We deliver all your foods and specials',
+      'We have a ton of bannans or corn for sale!',
        {url: 'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60', description: 'Our latest addition'},
        '338 E Harvard Ave'),
-       new Item('Banna Brew',
+       new Item('Los Altos Tacos',
       'https://images.unsplash.com/photo-1519861155730-0b5fbf0dd889?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-      'We deliver all your foods and specials',
+      'We deliver all your foods and specials with of course burritos and carnitas.',
        {url: 'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60', description: 'Our latest addition'},
        '338 E Harvard Ave'),
+       new Item('Los Altos Tacos',
+      'https://images.unsplash.com/photo-1509315811345-672d83ef2fbc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+      'We deliver all your foods and specials with of course burritos and carnitas.',
+       {url: 'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60', description: 'Our latest addition'},
+       '338 E Harvard Ave'),
+
+
   ];
   constructor() { }
 

@@ -13,11 +13,14 @@ import { ClientComponent } from './client/client.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { MatButtonModule, MatToolbarModule, MatSidenavModule, MatIconModule,
-  MatListModule, MatCardModule, MatFormFieldModule, MatInputModule, MatMenuModule, MatTabsModule } from '@angular/material';
+  MatListModule, MatCardModule, MatFormFieldModule, MatInputModule, MatMenuModule, MatTabsModule,
+   MatOptionModule, MatAutocompleteModule } from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { MapListingsComponent } from './client/map-listings/map-listings.component';
 import { ItemComponent } from './client/map-listings/item/item.component';
 import { OptionsComponent } from './client/map-listings/options/options.component';
+import { SearchBarComponent } from './client/map-listings/options/search-bar/search-bar.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -33,6 +36,7 @@ import { OptionsComponent } from './client/map-listings/options/options.componen
     MapListingsComponent,
     ItemComponent,
     OptionsComponent,
+    SearchBarComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +52,11 @@ import { OptionsComponent } from './client/map-listings/options/options.componen
     MatInputModule,
     FlexLayoutModule,
     MatMenuModule,
-    MatTabsModule
+    MatTabsModule,
+    MatAutocompleteModule,
+    MatOptionModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
