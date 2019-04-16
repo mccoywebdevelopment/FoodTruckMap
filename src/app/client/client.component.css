@@ -13,3 +13,7 @@ body{
 .row{
   margin-top: 30px;
 }
+.my-container{
+  margin-left:1%;
+  margin-right:1%;
+}

@@ -6,4 +6,10 @@ body {
    font-family: Roboto, "Helvetica Neue", sans-serif;
    background: #e1e2e1;
 }
+.primary-color{
+  color: #3F51B5;
+}
+.primary-color-background{
+  background-color: #3F51B5;
+}
 
