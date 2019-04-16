@@ -15,6 +15,9 @@ import { HeaderComponent } from './header/header.component';
 import { MatButtonModule, MatToolbarModule, MatSidenavModule, MatIconModule,
   MatListModule, MatCardModule, MatFormFieldModule, MatInputModule, MatMenuModule } from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { MapListingsComponent } from './client/map-listings/map-listings.component';
+import { ItemComponent } from './client/map-listings/item/item.component';
+import { OptionsComponent } from './client/map-listings/options/options.component';
 
 
 @NgModule({
@@ -27,6 +30,9 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     TruckDriverDashboardComponent,
     ClientComponent,
     HeaderComponent,
+    MapListingsComponent,
+    ItemComponent,
+    OptionsComponent,
   ],
   imports: [
     BrowserModule,
