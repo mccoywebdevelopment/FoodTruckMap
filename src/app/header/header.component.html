@@ -5,16 +5,23 @@
   <!-- This fills the remaining space of the current row -->
   <span class="example-spacer"></span>
   <div fxLayout="row" fxShow="false" fxShow.gt-sm>
-      <button mat-button routerLink="/products">Map</button>
-      <button mat-button routerLink="/dashboard">Truck Owners</button>
+      <button mat-button routerLink="/">Map</button>
+      <!--<button mat-button routerLink="/dashboard">Truck Owners</button>-->
+      <button mat-button [matMenuTriggerFor]="belowMenu">Truck Owners</button>
+      <mat-menu #belowMenu="matMenu" yPosition="below">
+        <button mat-menu-item routerLink="/signUp">Sign up</button>
+        <button mat-menu-item routerLink="/login">Login</button>
+      </mat-menu>
   </div>
   <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
    <mat-icon>menu</mat-icon>
   </button>
-
 </mat-toolbar>
 <mat-menu x-position="before" #menu="matMenu">
-  <button mat-menu-item routerLink="/products">Map</button>
-  <button mat-menu-item routerLink="/dashboard">Truck Owners</button>
-  <!--<button mat-menu-item>Help</button>-->
+  <button mat-menu-item routerLink="/">Map</button>
+  <button mat-menu-item [matMenuTriggerFor]="truckDrivers">Truck Owners</button>
 </mat-menu>
+<mat-menu  #truckDrivers="matMenu">
+    <button mat-menu-item routerLink="/signUp">Sign up</button>
+    <button mat-menu-item routerLink="/login">Login</button>
+  </mat-menu>

@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { MatButtonModule, MatToolbarModule, MatSidenavModule, MatIconModule,
+  MatListModule, MatCardModule, MatFormFieldModule, MatInputModule, MatMenuModule, MatTabsModule,
+   MatOptionModule, MatAutocompleteModule } from '@angular/material';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
@@ -12,16 +17,18 @@ import { TruckDriverDashboardComponent } from './food-truck-driver/truck-driver-
 import { ClientComponent } from './client/client.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
-import { MatButtonModule, MatToolbarModule, MatSidenavModule, MatIconModule,
-  MatListModule, MatCardModule, MatFormFieldModule, MatInputModule, MatMenuModule, MatTabsModule,
-   MatOptionModule, MatAutocompleteModule } from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { MapListingsComponent } from './client/map-listings/map-listings.component';
 import { ItemComponent } from './client/map-listings/item/item.component';
 import { OptionsComponent } from './client/map-listings/options/options.component';
 import { SearchBarComponent } from './client/map-listings/options/search-bar/search-bar.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
+
+const appRoutes: Routes = [
+  {path: '', component: MapListingsComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'signUp', component: RegisterComponent},
+];
 
 @NgModule({
   declarations: [
@@ -56,7 +63,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatAutocompleteModule,
     MatOptionModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent]
