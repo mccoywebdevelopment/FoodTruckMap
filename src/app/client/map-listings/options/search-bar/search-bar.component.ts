@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { Renderer2, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/platform-browser';
 
 
 
@@ -10,10 +11,13 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class SearchBarComponent implements OnInit {
 
+  searchTerm = '';
   constructor() {
 
   }
   ngOnInit() {
   }
-
+  myFunction(value: string){
+    alert(value);
+  }
 }
