@@ -1,3 +1,32 @@
-<p>
-  register works!
-</p>
+<div class="row">
+  <div class="offset-lg-4 col-lg-4">
+    <mat-card>
+      <h4 style="text-align: center">Create an account</h4>
+
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="Email" [formControl]="emailFormControl">
+          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+          </mat-error>
+          <mat-error *ngIf="emailFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="password" [formControl]="passwordFormControl">
+          <mat-error *ngIf="passwordFormControl.hasError('required')">
+            Password is <strong>required</strong>
+          </mat-error>
+          <mat-error *ngIf="passwordFormControl.hasError('maxlength(30)') || passwordFormControl.hasError('minlength')">
+              Password must be <strong>8</strong> to <strong>30</strong>
+            </mat-error>
+      </mat-form-field>
+
+
+        <div class="offset-lg-2 col-lg-8" style="padding-top: 10px;">
+          <button style="width:100%;" mat-raised-button color="accent">Submit</button>
+        </div>
+    </mat-card>
+  </div>
+</div>

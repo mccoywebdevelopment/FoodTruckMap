@@ -29,3 +29,6 @@ p{
 .my-item{
   transition: background-color .25s ease-out;
 }
+hr{
+  margin:6px;
+}

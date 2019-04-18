@@ -1,8 +1,12 @@
 <!--Search bar-->
 <!--filters-->
-<mat-card class="my-options primary-color-background">
-  <app-options></app-options>
-</mat-card>
-<mat-card class="items-list">
-  <app-item *ngFor="let itemObject of items" [itemObject]="itemObject"></app-item>
-</mat-card>
+<div class="row">
+  <div class="col-lg-4">
+  <mat-card class="my-options primary-color-background">
+    <app-options></app-options>
+  </mat-card>
+  <mat-card class="items-list">
+    <app-item *ngFor="let itemObject of items" [itemObject]="itemObject"></app-item>
+  </mat-card>
+  </div>
+</div>
