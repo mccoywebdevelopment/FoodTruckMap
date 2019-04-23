@@ -14,7 +14,7 @@
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
-          <input matInput placeholder="password" [formControl]="passwordFormControl">
+          <input matInput type="password" placeholder="password" [formControl]="passwordFormControl">
           <mat-error *ngIf="passwordFormControl.hasError('required')">
             Password is <strong>required</strong>
           </mat-error>
@@ -25,7 +25,7 @@
 
 
         <div class="offset-lg-2 col-lg-8" style="padding-top: 10px;">
-          <button style="width:100%;" mat-raised-button color="accent">Submit</button>
+          <button style="width:100%;" mat-raised-button color="accent" [disabled]="!passwordFormControl.valid || !emailFormControl.valid">Submit</button>
         </div>
     </mat-card>
   </div>

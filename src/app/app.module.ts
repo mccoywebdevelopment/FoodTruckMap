@@ -6,6 +6,7 @@ import { MatButtonModule, MatToolbarModule, MatSidenavModule, MatIconModule,
    MatOptionModule, MatAutocompleteModule } from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
+import { AgmCoreModule } from '@agm/core';
 
 
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import { MapListingsComponent } from './client/map-listings/map-listings.compone
 import { ItemComponent } from './client/map-listings/item/item.component';
 import { OptionsComponent } from './client/map-listings/options/options.component';
 import { SearchBarComponent } from './client/map-listings/options/search-bar/search-bar.component';
+import { MapComponent } from './client/map/map.component';
 
 
 const appRoutes: Routes = [
@@ -44,6 +46,7 @@ const appRoutes: Routes = [
     ItemComponent,
     OptionsComponent,
     SearchBarComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,6 +68,9 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCJyl_DjWAyQrgaRq_xAQjhPb22zUoi_xw'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
